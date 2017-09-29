@@ -1,21 +1,22 @@
 {
   "name": "juststyle",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "main": "dist/build.js",
   "license": "MIT",
   "scripts": {
     "dev": "webpack --config webpack.config.js --watch",
     "build": "webpack --config webpack.config.js --display-error-details",
+    "bump": "npm version patch --no-git-tag-version && git add package.json",
     "prepublish": "webpack --config webpack.config.js"
   },
   "peerDependency": {
-    "react": "^16.0.0"
+    "react": "^15.5.4"
   },
   "dependencies": {
     "next": "^3.2.2",
     "postcss": "^6.0.12",
     "postcss-nested": "^1.0.0",
-    "react": "^16.0.0",
+    "react": "15.5.4",
     "styled-jsx-postcss": "0.2.0"
   },
   "devDependencies": {
