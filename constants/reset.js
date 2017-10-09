@@ -553,16 +553,6 @@ export default () => (
       line-height: 2.8rem;
     }
 
-    .w {
-      color: ${colors.white};
-    }
-    .b {
-      color: ${colors.black};
-    }
-    .p {
-      color: ${colors.pink};
-    }
-
     * {
   &,
   &:after,
@@ -662,6 +652,18 @@ select,
 option {
   cursor: pointer;
 }
+
+.w {
+  color: ${colors.white};
+}
+.b {
+  color: ${colors.black};
+}
+.p {
+  color: ${colors.pink};
+}
+
+
     /**
  * @license
  * MyFonts Webfont Build ID 3454339, 2017-09-22T04:20:38-0400

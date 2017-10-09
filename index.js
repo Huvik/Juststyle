@@ -7,3 +7,6 @@ export { rem, percentage } from './utils'
 export { default as Body } from './components/body'
 export { H1, H2, H3, H4, Pretext, OverHeading } from './components/typography'
 export { default as Input } from './components/input'
+export { default as Wrap } from './components/Wrap'
+
+export { default as PlayButton } from './components/PlayButton'
