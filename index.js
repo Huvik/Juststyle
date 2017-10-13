@@ -1,5 +1,6 @@
 export { colors } from './constants/colors'
 export { sizes } from './constants/sizes'
+export { fonts } from './constants/fonts'
 
 export { rem, percentage } from './utils'
 

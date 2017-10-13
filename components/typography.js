@@ -9,7 +9,6 @@ export const H1 = ({ children, className }) => (
         font-family: ${fonts.komu};
         font-size: 8.4rem;
         line-height: 8.4rem;
-        margin: 0 0 2.8rem 0;
         letter-spacing: 0.064rem;
         font-weight: 400;
       }

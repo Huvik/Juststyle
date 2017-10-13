@@ -554,115 +554,110 @@ export default () => (
     }
 
     * {
-  &,
-  &:after,
-  &:before {
-    box-sizing: border-box;
-  }
-}
+      box-sizing: border-box;
+    }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-figure,
-blockquote,
-pre,
-dl,
-dd,
-ol,
-ul,
-form,
-fieldset,
-label,
-legend,
-input,
-textarea,
-select,
-option,
-button,
-table,
-th,
-td,
-caption,
-hr {
-  margin: 0;
-  padding: 0;
-}
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    figure,
+    blockquote,
+    pre,
+    dl,
+    dd,
+    ol,
+    ul,
+    form,
+    fieldset,
+    label,
+    legend,
+    input,
+    textarea,
+    select,
+    option,
+    button,
+    table,
+    th,
+    td,
+    caption,
+    hr {
+      margin: 0;
+      padding: 0;
+    }
 
-abbr[title],
-dfn[title] {
-  cursor: help;
-}
+    abbr[title],
+    dfn[title] {
+      cursor: help;
+    }
 
-a,
-u,
-ins {
-  text-decoration: none;
-}
+    a,
+    u,
+    ins {
+      text-decoration: none;
+    }
 
-a {
-  vertical-align: top;
-}
+    a {
+      vertical-align: top;
+    }
 
-ins {
-  border-bottom: 1px solid;
-}
+    ins {
+      border-bottom: 1px solid;
+    }
 
-figure {
-  > a {
-    display: inline-block;
-  }
+    figure {
+      > a {
+        display: inline-block;
+      }
 
-  > img {
-    display: block;
-  }
-}
+      > img {
+        display: block;
+      }
+    }
 
-img {
-  vertical-align: middle;
-  font-style: italic;
-}
+    img {
+      vertical-align: middle;
+      font-style: italic;
+    }
 
-input,
-textarea,
-select,
-option,
-button {
-  outline: none;
-}
+    input,
+    textarea,
+    select,
+    option,
+    button {
+      outline: none;
+    }
 
-fieldset,
-input,
-textarea,
-button {
-  border: none;
-}
+    fieldset,
+    input,
+    textarea,
+    button {
+      border: none;
+    }
 
-textarea {
-  resize: none;
-}
+    textarea {
+      resize: none;
+    }
 
-label,
-button,
-select,
-option {
-  cursor: pointer;
-}
+    label,
+    button,
+    select,
+    option {
+      cursor: pointer;
+    }
 
-.w {
-  color: ${colors.white};
-}
-.b {
-  color: ${colors.black};
-}
-.p {
-  color: ${colors.pink};
-}
-
+    .w {
+      color: ${colors.white};
+    }
+    .b {
+      color: ${colors.black};
+    }
+    .p {
+      color: ${colors.pink};
+    }
 
     /**
  * @license
