@@ -13,14 +13,13 @@
     "react": "^15.5.4"
   },
   "dependencies": {
-    "next": "^4.0.4",
+    "next": "^4.1.0",
     "postcss": "^6.0.12",
     "postcss-nested": "^1.0.0",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "styled-jsx": "^2.1.0",
-    "styled-jsx-plugin-postcss": "^0.1.0",
-    "styled-jsx-postcss": "0.2.0"
+    "styled-jsx-plugin-postcss": "^0.1.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
