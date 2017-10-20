@@ -48,9 +48,11 @@ export const H4 = ({ children, className }) => (
   <h4 className={className}>
     {children}
     <style jsx>{`
-      font-family: ${fonts.komu};
-      font-size: 2.8rem;
-      line-height: 3.5rem;
+      h4 {
+        font-family: ${fonts.komu};
+        font-size: 2.8rem;
+        line-height: 3.5rem;
+      }
     `}</style>
   </h4>
 )
@@ -72,8 +74,10 @@ export const OverHeading = ({ children }) => (
   <p>
     {children}
     <style jsx>{`
-      font-size: 1.2rem;
-      line-height: 1.4rem;
+      p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+      }
     `}</style>
   </p>
 )
