@@ -26,6 +26,11 @@ export const H2 = ({ children, className }) => (
         line-height: 5.6rem;
         font-weight: 400;
       }
+      .align-left {
+        text-align: left;
+        max-width: 35.2rem;
+        width: 100%;
+      }
     `}</style>
   </h2>
 )

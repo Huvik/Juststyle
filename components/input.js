@@ -1,5 +1,6 @@
 import React from 'react'
 import { colors } from '../constants/colors'
+import { fonts } from '../constants/fonts'
 
 export default ({ type, placeholder, onChange, className }) =>
   <div>
@@ -16,6 +17,7 @@ export default ({ type, placeholder, onChange, className }) =>
         background-color: ${colors.greyLight};
         padding: 1.4rem 2.6rem;
         line-height: 2.8rem;
+        font-family: ${fonts.roboto};
       }
     `}</style>
   </div>
