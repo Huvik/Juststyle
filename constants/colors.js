@@ -15,5 +15,6 @@ export const colors = {
   dribble: '#ea4d89',
   behance: '#0257ff',
   twitter: '#1ea1f1',
-  youtube: '#ce1e24'
+  youtube: '#ce1e24',
+  red: 'red'
 }

@@ -658,5 +658,30 @@ export default () => (
     .p {
       color: ${colors.pink};
     }
+
+    @for $i from 1 through 30 {
+      .pt-#{$i} {
+        padding-top: $i * 1.4rem;
+      }
+    }
+    
+    @for $i from 1 through 30 {
+      .pb-#{$i} {
+        padding-bottom: $i * 1.4rem;
+      }
+    }
+    
+    @for $i from 1 through 30 {
+      .mt-#{$i} {
+        margin-top: $i * 1.4rem;
+      }
+    }
+    
+    @for $i from 1 through 30 {
+      .mb-#{$i} {
+        margin-bottom: $i * 1.4rem;
+      }
+    }
+
   `}</style>
 )
