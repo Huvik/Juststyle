@@ -7,7 +7,7 @@ export const H1 = ({ children, className }) => (
     <style jsx>{`
       h1 {
         font-family: ${fonts.komu};
-        font-size: 8.4rem;
+        font-size: 8.2rem;
         line-height: 8.4rem;
         letter-spacing: 0.064rem;
         font-weight: 400;
