@@ -6,6 +6,7 @@
     [
       "styled-jsx/babel",
       { "plugins": ["styled-jsx-plugin-sass"] }
-    ]
+    ],
+    "transform-class-properties"
   ]
 }

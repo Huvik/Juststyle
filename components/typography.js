@@ -57,6 +57,20 @@ export const H4 = ({ children, className }) => (
   </h4>
 )
 
+export const H5 = ({ children, className }) => (
+  <h5>
+    {children}
+    <style jsx>{`
+      h5 {
+        font-family: ${fonts.komu};
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        font-weight: 400;
+      }
+    `}</style>
+  </h5>
+)
+
 export const Pretext = ({ children }) => (
   <p>
     {children}
