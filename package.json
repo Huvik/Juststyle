@@ -1,6 +1,6 @@
 {
   "name": "juststyle",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "main": "dist/build.js",
   "license": "MIT",
   "scripts": {
@@ -15,6 +15,7 @@
   "dependencies": {
     "next": "^4.1.0",
     "react": "^16.0.0",
+    "react-click-outside": "github:tj/react-click-outside",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {

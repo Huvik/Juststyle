@@ -649,6 +649,10 @@ export default () => (
       cursor: pointer;
     }
 
+    a:visited {
+      color: inherit;
+    }
+
     .w {
       color: ${colors.white};
     }
