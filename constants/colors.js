@@ -2,6 +2,7 @@ export const colors = {
   white: '#ffffff',
   black: '#000000',
   blackLight: '#4a4a4a',
+  body: '#566474',
   pink: '#ff747d',
   pinkDark: '#e5666e',
   green: '#78dda1',
@@ -15,5 +16,6 @@ export const colors = {
   dribble: '#ea4d89',
   behance: '#0257ff',
   twitter: '#1ea1f1',
-  youtube: '#ce1e24'
+  youtube: '#ce1e24',
+  shadow: '0 0 20px 0 rgba(53, 64, 82, 0.08)'
 }

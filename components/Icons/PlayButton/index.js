@@ -1,5 +1,7 @@
+import React from 'react'
+
 export default ({ width, height, color }) => (
-  <div width={width + 'rem'} height={height + 'rem'}>
+  <div style={{width: `${width}px`, height: `${height}px`}}>
     <svg
       className="p1"
       xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +121,7 @@ export default ({ width, height, color }) => (
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        position: absolute;
+        position: relative;
         left: 50%;
         transform: translateX(-50%);
         top: 50%;
@@ -127,6 +129,12 @@ export default ({ width, height, color }) => (
       }
       svg {
         position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
       }
     `}</style>
   </div>

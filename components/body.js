@@ -48,20 +48,20 @@ export default ({ children, dark }) => (
 
 @font-face {
   font-family: 'KomuA';
-  src: url('static/fonts/34B583_0_0.eot');
-  src: url('static/fonts/34B583_0_0.eot?#iefix') format('embedded-opentype'),
-    url('static/fonts/34B583_0_0.woff2') format('woff2'),
-    url('static/fonts/34B583_0_0.woff') format('woff'),
-    url('static/fonts/34B583_0_0.ttf') format('truetype');
+  src: url('/static/fonts/34B583_0_0.eot');
+  src: url('/static/fonts/34B583_0_0.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/34B583_0_0.woff2') format('woff2'),
+    url('/static/fonts/34B583_0_0.woff') format('woff'),
+    url('/static/fonts/34B583_0_0.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Bookmania-Regular';
-  src: url('static/fonts/34B583_1_0.eot');
-  src: url('static/fonts/34B583_1_0.eot?#iefix') format('embedded-opentype'),
-    url('static/fonts/34B583_1_0.woff2') format('woff2'),
-    url('static/fonts/34B583_1_0.woff') format('woff'),
-    url('static/fonts/34B583_1_0.ttf') format('truetype');
+  src: url('/static/fonts/34B583_1_0.eot');
+  src: url('/static/fonts/34B583_1_0.eot?#iefix') format('embedded-opentype'),
+    url('/static/fonts/34B583_1_0.woff2') format('woff2'),
+    url('/static/fonts/34B583_1_0.woff') format('woff'),
+    url('/static/fonts/34B583_1_0.ttf') format('truetype');
 }
     `}
       </style>
