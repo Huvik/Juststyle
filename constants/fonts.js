@@ -1,5 +1,5 @@
 export const fonts = {
-  komu: 'KomuA',
-  roboto: '"Roboto Slab", serif',
-  mania: 'Bookmania-Regular'
+  komu: 'KomuA, sans-serif',
+  roboto: 'Roboto Slab, serif',
+  mania: 'Bookmania-Regular, serif'
 }

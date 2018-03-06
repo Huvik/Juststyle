@@ -8,7 +8,7 @@ export const colors = {
   green: '#78dda1',
   greenDark: '#63c089',
   grey: '#bbbdc1',
-  greyDark: '#798088',
+  greyDark: '#566474',
   greyLight: '#e7e7e7',
   blue: '#354052',
   facebook: '#3b5998',

@@ -12,14 +12,9 @@ export default ({ isOpen, closeModal, children }) => (
     overlayClassName="overlay"
     className="modal"
   >
-    <Cross
-      width={65}
-      height={65}
-      color={colors.pink}
-      onClick={closeModal}
-      top={28}
-      right={28}
-    />
+    <div className="cross-box">
+      <Cross width={65} height={65} color={colors.pink} onClick={closeModal} />
+    </div>
     {children}
     <style jsx global>{`
       .ReactModal__Body--open {
@@ -44,13 +39,19 @@ export default ({ isOpen, closeModal, children }) => (
         flex-flow: column;
         align-items: center;
       }
-
       .modal {
         margin: 4rem;
         max-width: 123.4rem;
         background: ${colors.white};
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
         overflow: hidden;
+      }
+      .cross-box {
+        width: 6.5rem;
+        height: 6.5rem;
+        position: absolute;
+        top: 2.8rem;
+        right: 2.8rem;
       }
     `}</style>
   </ReactModal>

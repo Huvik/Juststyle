@@ -1,9 +1,18 @@
 import React from 'react'
 
-export default ({ src, alt, size }) => (
-  <div className={size === 'big' ? 'big' : 'small'}>
-    {src ? (
-      <img src={src} alt={alt} />
+export default ({ image, alt, size }) => (
+  <div className="avatar-box">
+    {image ? (
+      <img
+        className="avatar"
+        src={`https://images.justmighty.space/${image.secret}/${size}x${size}/${
+          image.name
+        }`}
+        srcSet={`https://images.justmighty.space/${image.secret}/${size *
+          2}x${size * 2}/${image.name.replace(/(\.[^.]*$)/g, '@2x$1')} 2x,
+             https://images.justmighty.space/${image.secret}/${size *
+          3}x${size * 3}/${image.name.replace(/(\.[^.]*$)/g, '@3x$1')} 3x`}
+      />
     ) : (
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 350">
         <path d="M175 171.17c38.9 0 70.46-38.3 70.46-85.58S235.1 0 175 0s-70.47 38.32-70.47 85.6c0 47.25 31.55 85.57 70.47 85.57zM41.9 301.85c0-2.88-.02-.8 0 0zm266.18 2.25c.04-.8.02-5.47 0 0z" />
@@ -11,18 +20,17 @@ export default ({ src, alt, size }) => (
       </svg>
     )}
     <style jsx>{`
-      div {
+      .avatar {
         border-radius: 50%;
+        overflow: hidden;
       }
-      .big {
-        height: 4.2rem;
-      }
-      .small {
-        height: 2.8rem;
+      .avatar-box {
+        height: ${size}px;
+      width: ${size}px;
       }
       img {
-        height: 100%;
-        width: auto;
+        width: 100%;
+        height: auto;
       }
       svg {
         height: 100%;

@@ -1,14 +1,6 @@
 import React from 'react'
 
-export default ({
-  width,
-  height,
-  top,
-  right,
-  center,
-  onClick,
-  children
-}) => (
+export default ({ width, height, top, right, center, onClick, children }) => (
   <div
     style={{
       width: '100%',
@@ -16,7 +8,7 @@ export default ({
       maxWidth: `${width}px`,
       maxHeight: `${height}px`,
       top: top ? `${top}px` : undefined,
-      right: right ? `${right}px` : undefined,      
+      right: right ? `${right}px` : undefined
     }}
     className={`${center ? 'icon-centre' : undefined} icon`}
     onClick={onClick}
@@ -25,18 +17,17 @@ export default ({
     <style jsx global>{`
       .icon-centre {
         left: 50%;
-        transform: translateX(-50%);
         top: 50%;
-        transform: translateY(-50%);
+        transform: translate(-50%, -50%);
       }
       .icon {
         display: inline-flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        svg {
-          position: absolute;
-        }
+      }
+      .icon svg {
+        position: absolute;
       }
       @keyframes p1 {
         0% {

@@ -1,7 +1,8 @@
 import React from 'react'
+import Icon from '../Icon'
 
-export default ({ width, height, color }) => (
-  <div style={{width: `${width}px`, height: `${height}px`}}>
+export default ({ width, height, color, ...rest }) => (
+  <Icon width={width} height={height} {...rest}>
     <svg
       className="p1"
       xmlns="http://www.w3.org/2000/svg"
@@ -47,95 +48,5 @@ export default ({ width, height, color }) => (
         <path d="M-40-54h400v400H-40z" />
       </g>
     </svg>
-    <style jsx>{`
-      @keyframes p1 {
-        0% {
-          opacity: 1;
-        }
-        33.33% {
-          opacity: 1;
-        }
-        33.34% {
-          opacity: 0;
-        }
-        66.66% {
-          opacity: 0;
-        }
-        66.67% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @keyframes p2 {
-        0% {
-          opacity: 0;
-        }
-        33.33% {
-          opacity: 0;
-        }
-        33.34% {
-          opacity: 1;
-        }
-        66.66% {
-          opacity: 1;
-        }
-        66.67% {
-          opacity: 0;
-        }
-        100% {
-          opacity: 0;
-        }
-      }
-      @keyframes p3 {
-        0% {
-          opacity: 0;
-        }
-        33.33% {
-          opacity: 0;
-        }
-        33.34% {
-          opacity: 0;
-        }
-        66.66% {
-          opacity: 0;
-        }
-        66.67% {
-          opacity: 1;
-        }
-        100% {
-          opacity: 1;
-        }
-      }
-      .p1 {
-        animation: p1 450ms infinite;
-      }
-      .p2 {
-        animation: p2 450ms infinite;
-      }
-      .p3 {
-        animation: p3 450ms infinite;
-      }
-      div {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        left: 50%;
-        transform: translateX(-50%);
-        top: 50%;
-        transform: translateY(-50%);
-      }
-      svg {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-      }
-    `}</style>
-  </div>
+   </Icon>
 )

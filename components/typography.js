@@ -49,6 +49,7 @@ export const H4 = ({ children, className }) => (
     {children}
     <style jsx>{`
       h4 {
+        font-weight: 400;
         font-family: ${fonts.komu};
         font-size: 2.8rem;
         line-height: 3.5rem;
@@ -71,7 +72,7 @@ export const H5 = ({ children, className }) => (
   </h5>
 )
 
-export const Pretext = ({ children }) => (
+export const Pretext = ({ children, color }) => (
   <p>
     {children}
     <style jsx>{`

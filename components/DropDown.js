@@ -16,8 +16,12 @@ class DropDown extends React.Component {
     }
   }
 
+  componentWillReceiveProps({ options, selected }) {
+    this.setState({ options, selectedOption: selected }, this.readSize)
+  }
+
   componentDidMount() {
-    this.setState({ width: this.win.offsetWidth })
+    this.setState({ width: this.win.offsetWidth }, this.readSize)
   }
 
   toggleOpen = () => {
@@ -90,22 +94,21 @@ class DropDown extends React.Component {
               margin-top: -0.7rem;
               background-color: ${colors.white};
               position: absolute;
-              &.active {
-                box-shadow: 0 0 15px 0 rgba(187, 189, 193, 0.5);
-                .dropdown-items {
-                  display: block;
-                }
-              }
+            }
+            .dropdown-window .active {
+              box-shadow: 0 0 15px 0 rgba(187, 189, 193, 0.5);
+            }
+            .dropdown-window .active .dropdown-items {
+              display: block;
             }
             .selectedOption {
               display: inline-flex;
               color: ${colors.pink};
               margin-bottom: 1rem;
-
-              span {
-                text-decoration: underline;
-                margin-right: 0.5rem;
-              }
+            }
+            .selectedOption span {
+              text-decoration: underline;
+              margin-right: 0.5rem;
             }
             .dropdown-items {
               transition: all 150ms ease-in;
@@ -114,14 +117,14 @@ class DropDown extends React.Component {
             }
             .dropdown-item {
               margin-bottom: 1rem;
-              span {
-                transition: all ease-in 150ms;
-                border-bottom: 3px solid transparent;
-                &:hover {
-                  color: ${colors.pink};
-                  border-bottom: 3px solid ${colors.pink};
-                }
-              }
+            }
+            .dropdown-item span {
+              transition: all ease-in 150ms;
+              border-bottom: 3px solid transparent;
+            }
+            .dropdown-item span:hover {
+              color: ${colors.pink};
+              border-bottom: 3px solid ${colors.pink};
             }
           `}</style>
         </div>

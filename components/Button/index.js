@@ -8,7 +8,7 @@ export default ({ children, onClick, small, className }) => (
     {children}
     <style jsx>{`
       button {
-        line-height: ${small ? '4.2rem' : '5.2rem'};
+        line-height: ${small ? '4.2rem' : '5.6rem'};
       }
       button {
         min-width: 12.6rem;
@@ -17,15 +17,17 @@ export default ({ children, onClick, small, className }) => (
         text-transform: uppercase;
         font-family: ${fonts.komu};
         padding: 0 2.5rem;
-        &:hover {
-          background-color: ${colors.greenDark};
-        }
+
+      }
+      button:hover {
+        background-color: ${colors.greenDark};
       }
       .pink {
         background-color: ${colors.pink};
-        &:hover {
-          background-color: ${colors.pinkDark};
-        }
+
+      }
+      .pink:hover {
+        background-color: ${colors.pinkDark};
       }
     `}</style>
   </button>

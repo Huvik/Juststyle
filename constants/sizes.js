@@ -11,3 +11,7 @@ export const sizes = {
   w12: 1486,
   w14: 1738
 }
+
+export function rem(size) {
+  return size / 10 + 'rem'
+}

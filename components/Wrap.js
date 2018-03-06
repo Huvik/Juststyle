@@ -1,3 +1,4 @@
+import React from 'react'
 import { sizes, rem } from '../constants/sizes'
 
 export default ({ flex, size, children }) => (
@@ -7,7 +8,7 @@ export default ({ flex, size, children }) => (
       div {
         box-sizing: content-box;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 0 4rem;
       }
       .w-6 {
         max-width: ${rem(sizes.w6)};

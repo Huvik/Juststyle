@@ -1,7 +1,6 @@
 import React from 'react'
 import Icon from '../Icon'
 
-
 export default ({ width, height, color, ...rest }) => (
   <Icon width={width} height={height} {...rest}>
     <svg

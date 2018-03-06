@@ -551,6 +551,7 @@ export default () => (
       -webkit-font-smoothing: antialiased;
       font-size: 1.6rem;
       line-height: 2.8rem;
+      color: ${colors.body};
     }
 
     * {
@@ -608,14 +609,12 @@ export default () => (
       border-bottom: 1px solid;
     }
 
-    figure {
-      > a {
-        display: inline-block;
-      }
+    figure > a {
+      display: inline-block;
+    }
 
-      > img {
-        display: block;
-      }
+    figure > img {
+      display: block;
     }
 
     img {
