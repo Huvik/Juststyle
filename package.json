@@ -1,6 +1,6 @@
 {
   "name": "juststyle",
-  "version": "0.0.24",
+  "version": "0.5.0",
   "main": "dist/build.js",
   "license": "MIT",
   "scripts": {
@@ -18,7 +18,8 @@
     "react": "^16.2.0",
     "react-click-outside": "github:tj/react-click-outside",
     "react-dom": "^16.2.0",
-    "react-modal": "^3.1.13"
+    "react-modal": "^3.1.13",
+    "react-transition-group": "^2.2.1"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
