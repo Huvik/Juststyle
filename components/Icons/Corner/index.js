@@ -6,8 +6,6 @@ export default ({ width, height, color, ...rest }) => (
     <svg
       className="p1"
       xmlns="http://www.w3.org/2000/svg"
-      width={296 / 350 * width}
-      height={321 / 350 * height}
       viewBox="0 0 296 321"
     >
       <g fill="none" fillRule="evenodd">
@@ -21,8 +19,6 @@ export default ({ width, height, color, ...rest }) => (
     <svg
       className="p2"
       xmlns="http://www.w3.org/2000/svg"
-      width={308 / 350 * width}
-      height={310 / 350 * height}
       viewBox="0 0 308 310"
     >
       <g fill="none" fillRule="evenodd">
@@ -36,8 +32,6 @@ export default ({ width, height, color, ...rest }) => (
     <svg
       className="p3"
       xmlns="http://www.w3.org/2000/svg"
-      width={324 / 350 * width}
-      height={312 / 350 * height}
       viewBox="0 0 324 312"
     >
       <g fill="none" fillRule="evenodd">

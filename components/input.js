@@ -8,11 +8,9 @@ export default ({ type, placeholder, onChange, value, className }) =>
       div {
         display: inline-block;
         width: 100%;
-        max-width: 35.2rem;
       }
       input {
         width: 100%;
-        max-width: 35.2rem;
         background-color: ${colors.greyLight};
         padding: 1.4rem 2.6rem;
         line-height: 2.8rem;

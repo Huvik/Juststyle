@@ -12,8 +12,8 @@ export default ({ isOpen, closeModal, children }) => (
     overlayClassName="overlay"
     className="modal"
   >
-    <div className="cross-box">
-      <Cross width={65} height={65} color={colors.pink} onClick={closeModal} />
+    <div className="cross-box" onClick={closeModal}>
+      <Cross width={65} height={65} color={colors.pink} />
     </div>
     {children}
     <style jsx global>{`
@@ -44,7 +44,7 @@ export default ({ isOpen, closeModal, children }) => (
         max-width: 123.4rem;
         background: ${colors.white};
         box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
-        overflow: hidden;
+        overflow-y: scroll;
       }
       .cross-box {
         width: 6.5rem;

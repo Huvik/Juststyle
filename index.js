@@ -16,10 +16,16 @@ export { default as Modal } from './components/Modal'
 export { default as Button } from './components/Button'
 
 // ICONS
-export { default as PlayButton } from './components/Icons/PlayButton'
-export { default as Cross } from './components/Icons/Cross'
+export { default as Arrow } from './components/Icons/Arrow'
+export { default as Box } from './components/Icons/Box'
 export { default as Corner } from './components/Icons/Corner'
+export { default as Cross } from './components/Icons/Cross'
 export { default as ExclamationMark } from './components/Icons/ExclamationMark'
+export { default as Line } from './components/Icons/Line'
+export { default as People } from './components/Icons/People'
+export { default as PlayButton } from './components/Icons/PlayButton'
+export { default as Quote } from './components/Icons/Quote'
+export { default as Triangle } from './components/Icons/Triangle'
 export { default as Underline } from './components/Icons/Underline'
 
 

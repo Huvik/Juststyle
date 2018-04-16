@@ -1,33 +1,25 @@
 import React from 'react'
+import { percentage } from '../../../utils'
 
-export default ({ width, height, top, right, center, onClick, children }) => (
+export default ({ width, height, onClick, children }) =>
   <div
-    style={{
-      width: '100%',
-      height: 'auto',
-      maxWidth: `${width}px`,
-      maxHeight: `${height}px`,
-      top: top ? `${top}px` : undefined,
-      right: right ? `${right}px` : undefined
-    }}
-    className={`${center ? 'icon-centre' : undefined} icon`}
+    className="icon"
     onClick={onClick}
   >
     {children}
-    <style jsx global>{`
-      .icon-centre {
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-      }
+    <style jsx>{`
       .icon {
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
+        width: 100%;
+        height: 0;
+        padding-top: ${percentage(height, width)};
       }
-      .icon svg {
+      .icon :global(svg) {
         position: absolute;
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
       @keyframes p1 {
         0% {
@@ -90,15 +82,49 @@ export default ({ width, height, top, right, center, onClick, children }) => (
         }
       }
 
-      .p1 {
+      .icon :global(.p1) {
+        animation-delay: -1ms;
         animation: p1 450ms infinite;
       }
-      .p2 {
+      .icon :global(.p2) {
+        animation-delay: -1ms;
         animation: p2 450ms infinite;
       }
-      .p3 {
+      .icon :global(.p3) {
+        animation-delay: -1ms;
         animation: p3 450ms infinite;
       }
     `}</style>
   </div>
-)
+  // <TransitionGroup>
+
+  //     <Transition  timeout={duration}>
+  //   {(state) => (
+  //     <div style={{
+  //       ...defaultStyle,
+  //       ...transitionStyles[state]
+  //     }}>
+  //       I'm a fade Transition!
+  //     </div>
+  //   )}
+  // </Transition>
+  //   {/* {children.map((kid, i) => (
+  //     <Transition timeout={{ enter: 0, exit: i * time }}>
+  //       {(state) => <div className={`animation-item ${state}`}>{kid}</div>}
+  //     </Transition>
+  //   ))}
+  //   <style jsx>{`
+  //     .animation-item {
+  //       opacity: 0;
+  //     }
+  //   `}</style> */}
+  // </TransitionGroup>
+
+// style={{
+//   width: '100%',
+//   height: 'auto',
+//   maxWidth: `${width}px`,
+//   maxHeight: `${height}px`,
+//   top: top ? `${top}px` : undefined,
+//   right: right ? `${right}px` : undefined
+// }}
