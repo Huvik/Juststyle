@@ -551,6 +551,7 @@ export default () => (
       -webkit-font-smoothing: antialiased;
       font-size: 1.6rem;
       line-height: 2.8rem;
+      letter-spacing: 0.01rem;
       color: ${colors.body};
     }
 

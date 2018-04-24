@@ -72,6 +72,28 @@ export const H5 = ({ children, className }) => (
   </h5>
 )
 
+export const Citation = ({ children, className }) => (
+  <blockquote className={className}>
+    {children}
+    <style jsx>{`
+      blockquote {
+        font-family: ${fonts.mania};
+        font-size: 3.5rem;
+        line-height: 4.2rem;
+        font-weight: 400;
+        letter-spacing: 0.03rem;
+        margin-bottom: 2.8rem;
+      }
+      @media (max-width: 450px) {
+        blockquote {
+          font-size: 2.2rem;
+          line-height: 2.8rem;
+        }
+      }
+    `}</style>
+  </blockquote>
+)
+
 export const Pretext = ({ children, color }) => (
   <p>
     {children}
