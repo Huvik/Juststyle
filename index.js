@@ -6,7 +6,7 @@ export { rem, percentage } from './utils'
 
 //Components
 export { default as Body } from './components/Body'
-export { H1, H2, H3, H4, H5, Citation, Pretext, OverHeading } from './components/typography'
+export { H1, H2, H3, H4, H5, Citation, PeopleTitle, Pretext, OverHeading } from './components/typography'
 
 export { default as Input } from './components/Input'
 export { default as TextInput } from './components/TextInput'

@@ -40,6 +40,12 @@ export const H3 = ({ children, className }) => (
         line-height: 4.2rem;
         font-weight: 400;
       }
+      @media (max-width: 450px) {
+        h3 {
+          font-size: 2.8rem;
+          line-height: 3.5rem;
+        }
+      }
     `}</style>
   </h3>
 )
@@ -67,6 +73,21 @@ export const H5 = ({ children, className }) => (
         font-size: 1.8rem;
         line-height: 2.8rem;
         font-weight: 400;
+      }
+    `}</style>
+  </h5>
+)
+
+export const PeopleTitle = ({ children, className }) => (
+  <h5>
+    {children}
+    <style jsx>{`
+      h5 {
+        font-family: ${fonts.komu};
+        font-size: 2.8rem;
+        line-height: 2.8rem;
+        font-weight: 400;
+        margin-bottom: 0.1rem;
       }
     `}</style>
   </h5>
@@ -114,6 +135,7 @@ export const OverHeading = ({ children }) => (
       p {
         font-size: 1.2rem;
         line-height: 1.4rem;
+        margin-bottom: 1.4rem;
       }
     `}</style>
   </p>

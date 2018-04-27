@@ -16,7 +16,7 @@ export default ({ width, height, onClick, children }) =>
       }
       .icon :global(svg) {
         position: absolute;
-        max-width: 100%;
+        width: 100%;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);

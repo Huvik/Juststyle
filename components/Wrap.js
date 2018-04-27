@@ -1,8 +1,8 @@
 import React from 'react'
 import { sizes, rem } from '../constants/sizes'
 
-export default ({ flex, size, children }) => (
-  <div className={flex ? 'f w-' + size : 'w-' + size}>
+export default ({ flex, size, children, className }) => (
+  <div className={`w-${size} ${flex ? 'f' : ''} ${className}`}>
     {children}
     <style jsx>{`
       div {
@@ -19,6 +19,9 @@ export default ({ flex, size, children }) => (
       .w-10 {
         max-width: ${rem(sizes.w10)};
       }
+      .w-11 {
+        max-width: ${rem(sizes.w11)};
+      }
       .w-12 {
         max-width: ${rem(sizes.w12)};
       }
@@ -26,6 +29,16 @@ export default ({ flex, size, children }) => (
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
+      }
+      .f-end {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-end;
+      }
+      @media (max-width: 450px) {
+        div {
+          padding: 0 2rem;
+        }
       }
     `}</style>
   </div>
