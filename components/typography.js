@@ -105,10 +105,11 @@ export const Citation = ({ children, className }) => (
         letter-spacing: 0.03rem;
         margin-bottom: 2.8rem;
       }
-      @media (max-width: 450px) {
+      @media (max-width: 425px) {
         blockquote {
           font-size: 2.2rem;
           line-height: 2.8rem;
+          margin-bottom: 1.4rem;
         }
       }
     `}</style>
