@@ -2,7 +2,7 @@ import React from 'react'
 import { colors } from './colors'
 import { fonts } from './fonts'
 
-export default () => (
+export default () =>
   <style jsx global>{`
     html,
     body,
@@ -649,7 +649,8 @@ export default () => (
       cursor: pointer;
     }
 
-    a:visited {
+    a:visited,
+    a:link {
       color: inherit;
     }
 
@@ -663,4 +664,3 @@ export default () => (
       color: ${colors.pink};
     }
   `}</style>
-)
