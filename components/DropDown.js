@@ -44,6 +44,7 @@ class DropDown extends React.Component {
   render() {
     const { options, open, selectedOption, width } = this.state
     const { onChange } = this.props
+    console.log(this.state.width)
 
     return (
       <ClickOutside onClickOutside={this.close}>
@@ -56,38 +57,41 @@ class DropDown extends React.Component {
             onClick={this.toggleOpen}
           >
             <div className="selectedOption">
-              <span>{selectedOption}</span>
+              <span>
+                {selectedOption}
+              </span>
               {!open ? '▾ ' : '▾'}
             </div>
             <div className="dropdown-items">
               {options
                 ? options.map(
                     option =>
-                      selectedOption !== option ? (
-                        <div
-                          className="dropdown-item"
-                          onClick={() => this.changeOption(option)}
-                          key={option}
-                        >
-                          <span>{option}</span>
-                        </div>
-                      ) : (
-                        undefined
-                      )
+                      selectedOption !== option
+                        ? <div
+                            className="dropdown-item"
+                            onClick={() => this.changeOption(option)}
+                            key={option}
+                          >
+                            <span>
+                              {option}
+                            </span>
+                          </div>
+                        : undefined
                   )
                 : undefined}
             </div>
           </div>
-          <style jsx global>{`
+          <style jsx>{`
             .dropdown {
               font-family: ${fonts.komu};
-              color: ${colors.greyDark};
-              font-size: 2.1rem;
-              line-height: 2.1rem;
-              height: 2.1rem;
+              color: ${colors.black};
+              font-size: ${'big' in this.props ? '5.6' : '2.1'}rem;
+              line-height: ${'big' in this.props ? '5.6' : '2.1'}rem;
+              height: ${'big' in this.props ? '5.6' : '2.1'}rem;
               margin-left: 0.1rem;
               text-transform: uppercase;
               position: relative;
+              white-space: nowrap;
             }
             .dropdown-window {
               padding: 0.7rem 0.7rem 0 0.7rem;
@@ -95,10 +99,10 @@ class DropDown extends React.Component {
               background-color: ${colors.white};
               position: absolute;
             }
-            .dropdown-window .active {
+            .dropdown-window.active {
               box-shadow: 0 0 15px 0 rgba(187, 189, 193, 0.5);
             }
-            .dropdown-window .active .dropdown-items {
+            .dropdown-window.active .dropdown-items {
               display: block;
             }
             .selectedOption {
