@@ -6,7 +6,17 @@ export { rem, percentage } from './utils'
 
 //Components
 export { default as Body } from './components/Body'
-export { H1, H2, H3, H4, H5, Citation, PeopleTitle, Pretext, OverHeading } from './components/typography'
+export {
+  H1,
+  H2,
+  H3,
+  H4,
+  H5,
+  Citation,
+  PeopleTitle,
+  Pretext,
+  OverHeading
+} from './components/typography'
 
 export { default as Input } from './components/Input'
 export { default as TextInput } from './components/TextInput'
@@ -27,7 +37,6 @@ export { default as PlayButton } from './components/Icons/PlayButton'
 export { default as Quote } from './components/Icons/Quote'
 export { default as Triangle } from './components/Icons/Triangle'
 export { default as Underline } from './components/Icons/Underline'
-
 
 export { default as DropDown } from './components/DropDown'
 export { default as Avatar } from './components/Avatar'

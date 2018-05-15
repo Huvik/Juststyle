@@ -3,7 +3,7 @@ import ReactModal from 'react-modal'
 import Cross from '../Icons/Cross'
 import { colors } from '../../constants/colors'
 
-export default ({ isOpen, closeModal, children }) => (
+export default ({ isOpen, closeModal, children }) =>
   <ReactModal
     isOpen={isOpen}
     onRequestClose={closeModal}
@@ -12,10 +12,10 @@ export default ({ isOpen, closeModal, children }) => (
     overlayClassName="overlay"
     className="modal"
   >
+    {children}
     <div className="cross-box" onClick={closeModal}>
       <Cross width={65} height={65} color={colors.pink} />
     </div>
-    {children}
     <style jsx global>{`
       .ReactModal__Body--open {
         overflow: hidden;
@@ -38,6 +38,7 @@ export default ({ isOpen, closeModal, children }) => (
         display: flex;
         flex-flow: column;
         align-items: center;
+        justify-content: center;
       }
       .modal {
         margin: 4rem;
@@ -52,7 +53,7 @@ export default ({ isOpen, closeModal, children }) => (
         position: absolute;
         top: 2.8rem;
         right: 2.8rem;
+        z-index: 10000;
       }
     `}</style>
   </ReactModal>
-)
