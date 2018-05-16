@@ -11,6 +11,7 @@ export const colors = {
   grey: '#bbbdc1',
   greyDark: '#566474',
   greyLight: '#e7e7e7',
+  greyContent: '#798088',
   blue: '#354052',
   facebook: '#3b5998',
   instagram: '#9012fe',

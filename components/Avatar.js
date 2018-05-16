@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ image, alt, size }) =>
+export default ({ image, alt, size, bottom }) =>
   <div className="avatar-box">
     {image
       ? <img
@@ -23,6 +23,7 @@ export default ({ image, alt, size }) =>
       .avatar-box {
         height: ${size}px;
         width: ${size}px;
+        margin-bottom: ${bottom}px;
       }
       img {
         width: 100%;

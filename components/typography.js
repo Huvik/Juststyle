@@ -123,6 +123,7 @@ export const Pretext = ({ children, color }) => (
       p {
         font-size: 2.1rem;
         line-height: 4.2rem;
+        letter-spacing: 0.02rem;
         max-width: 73rem;
       }
     `}</style>
