@@ -1,10 +1,11 @@
 import React from 'react'
 
-export default ({ image, alt, size, bottom }) =>
+export default ({ image, alt, size }) =>
   <div className="avatar-box">
     {image
       ? <img
           className="avatar"
+          alt={alt}
           src={`https://cdn.justmighty.cz/${image.secret}/${size}x${size}/${image.name}`}
           srcSet={`https://cdn.justmighty.cz/${image.secret}/${size *
             2}x${size * 2}/${image.name.replace(/(\.[^.]*$)/g, '@2x$1')} 2x,
@@ -23,7 +24,6 @@ export default ({ image, alt, size, bottom }) =>
       .avatar-box {
         height: ${size}px;
         width: ${size}px;
-        margin-bottom: ${bottom}px;
       }
       img {
         width: 100%;

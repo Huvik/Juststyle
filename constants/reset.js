@@ -663,4 +663,19 @@ export default () =>
     .p {
       color: ${colors.pink};
     }
+    @keyframes pulse {
+      0% {
+        background-color: ${colors.greyLight};
+      }
+      50% {
+        background-color: ${colors.grey};
+        opacity: 0.6;
+      }
+      100% {
+        background-color: ${colors.greyLight};
+      }
+    }
+    .loading {
+      animation: pulse 1.7s infinite ease-in-out;
+    }
   `}</style>

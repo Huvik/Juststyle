@@ -84,15 +84,15 @@ export default ({ width, height, onClick, children }) =>
 
       .icon :global(.p1) {
         animation-delay: -1ms;
-        animation: p1 450ms infinite;
+        animation: p1 500ms infinite;
       }
       .icon :global(.p2) {
         animation-delay: -1ms;
-        animation: p2 450ms infinite;
+        animation: p2 500ms infinite;
       }
       .icon :global(.p3) {
         animation-delay: -1ms;
-        animation: p3 450ms infinite;
+        animation: p3 500ms infinite;
       }
     `}</style>
   </div>

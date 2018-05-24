@@ -94,10 +94,10 @@ export const PeopleTitle = ({ children, className }) => (
 )
 
 export const Citation = ({ children, className }) => (
-  <blockquote className={className}>
+  <p className={className}>
     {children}
     <style jsx>{`
-      blockquote {
+      p {
         font-family: ${fonts.mania};
         font-size: 3.5rem;
         line-height: 4.2rem;
@@ -106,14 +106,14 @@ export const Citation = ({ children, className }) => (
         margin-bottom: 2.8rem;
       }
       @media (max-width: 425px) {
-        blockquote {
+        p {
           font-size: 2.2rem;
           line-height: 2.8rem;
           margin-bottom: 1.4rem;
         }
       }
     `}</style>
-  </blockquote>
+  </p>
 )
 
 export const Pretext = ({ children, color }) => (
