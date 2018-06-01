@@ -5,6 +5,7 @@ export default ({ image, alt, size }) =>
     {image
       ? <img
           className="avatar"
+          alt={alt}
           src={`https://cdn.justmighty.cz/${image.secret}/${size}x${size}/${image.name}`}
           srcSet={`https://cdn.justmighty.cz/${image.secret}/${size *
             2}x${size * 2}/${image.name.replace(/(\.[^.]*$)/g, '@2x$1')} 2x,
