@@ -24,6 +24,7 @@ export { default as Wrap } from './components/Wrap'
 
 export { default as Modal } from './components/Modal'
 export { default as Button } from './components/Button'
+export { default as ToggleButton } from './components/ToggleButton'
 
 // ICONS
 export { default as Arrow } from './components/Icons/Arrow'

@@ -7,14 +7,38 @@ export default ({ children, dark }) =>
   <main style={{ backgroundColor: dark ? colors.greyLight : colors.white }}>
     <Head>
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto+Slab"
-        rel="stylesheet"
-        lazyload
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+        href="https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2"
+      />
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+        href="/static/fonts/komu_a.woff2"
+      />
+      <link
+        rel="preload"
+        as="font"
+        type="font/woff2"
+        crossorigin="anonymous"
+        href="/static/fonts/mania.woff2"
       />
     </Head>
     {children}
     <Reset />
     <style jsx>{`
+      @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: local('Roboto'), local('Roboto-Regular'),
+          url(https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2)
+            format('woff2');
+      }
       @font-face {
         font-family: 'KomuA';
         src: url('/static/fonts/komu_a.eot');
