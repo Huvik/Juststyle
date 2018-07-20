@@ -16,13 +16,13 @@ class DropDown extends React.Component {
     }
   }
 
-  componentWillReceiveProps({ options, selected }) {
-    this.setState({ options, selectedOption: selected }, this.readSize)
-  }
+  // componentWillReceiveProps({ options, selected }) {
+  //   this.setState({ options, selectedOption: selected }, this.readSize)
+  // }
 
-  componentDidMount() {
-    this.setState({ width: this.win.offsetWidth }, this.readSize)
-  }
+  // componentDidMount() {
+  //   this.setState({ width: this.win.offsetWidth }, this.readSize)
+  // }
 
   toggleOpen = () => {
     this.setState({ open: !this.state.open }, this.readSize)
@@ -43,15 +43,15 @@ class DropDown extends React.Component {
 
   render() {
     const { options, open, selectedOption, width } = this.state
-    const { onChange } = this.props
-    console.log(this.state.width)
+    const { onChange, big } = this.props
+    // return <div>{options.map(option => <div>a</div>)}</div>
 
     return (
       <ClickOutside onClickOutside={this.close}>
         <div className="dropdown" style={{ width }}>
           <div
-            ref={window => {
-              this.win = window
+            ref={ref => {
+              this.win = ref
             }}
             className={`dropdown-window ${open ? ' active' : ''}`}
             onClick={this.toggleOpen}
@@ -85,13 +85,13 @@ class DropDown extends React.Component {
             .dropdown {
               font-family: ${fonts.komu};
               color: ${colors.black};
-              font-size: ${'big' in this.props ? '5.6' : '2.1'}rem;
-              line-height: ${'big' in this.props ? '5.6' : '2.1'}rem;
-              height: ${'big' in this.props ? '5.6' : '2.1'}rem;
               margin-left: 0.1rem;
               text-transform: uppercase;
               position: relative;
               white-space: nowrap;
+              font-size: ${big ? '5.6' : '2.1'}rem;
+              line-height: ${big ? '5.6' : '2.1'}rem;
+              height: ${big ? '5.6' : '2.1'}rem;
             }
             .dropdown-window {
               padding: 0.7rem 0.7rem 0 0.7rem;
