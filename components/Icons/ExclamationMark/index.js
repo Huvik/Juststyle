@@ -5,7 +5,7 @@ export default ({ width, height, color, ...rest }) => (
   <Icon width={width} height={height} {...rest}>
     <svg
       className="p1"
-      viewBox="0 0 164 542"
+      viewBox="0 0 121 421"
     >
       <g fill="none" fillRule="evenodd">
         <path

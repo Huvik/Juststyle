@@ -19,6 +19,7 @@
     "react-click-outside": "github:tj/react-click-outside",
     "react-dom": "^16.3.2",
     "react-modal": "^3.1.13",
+    "react-pose": "^2.1.2",
     "react-transition-group": "^2.2.1"
   },
   "devDependencies": {

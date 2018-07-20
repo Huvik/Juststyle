@@ -676,6 +676,6 @@ export default () =>
       }
     }
     .loading {
-      animation: pulse 1.7s infinite ease-in-out;
+      animation: pulse 1.5s infinite ease-in-out;
     }
   `}</style>

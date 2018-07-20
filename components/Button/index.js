@@ -21,6 +21,7 @@ export default ({ children, onClick, small, className }) => (
       }
       button:hover {
         background-color: ${colors.greenDark};
+        color: ${colors.white};
       }
       .pink {
         background-color: ${colors.pink};
