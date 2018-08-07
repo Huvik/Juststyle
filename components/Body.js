@@ -10,28 +10,28 @@ export default ({ children, dark }) =>
         rel="preload"
         as="font"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         href="https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufD5qWr4xCCQ_k.woff2"
       />
       <link
         rel="preload"
         as="font"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         href="https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qWr4xCC.woff2"
       />
       <link
         rel="preload"
         as="font"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         href="/static/fonts/komu_a.woff2"
       />
       <link
         rel="preload"
         as="font"
         type="font/woff2"
-        crossorigin="anonymous"
+        crossOrigin="anonymous"
         href="/static/fonts/mania.woff2"
       />
     </Head>
