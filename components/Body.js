@@ -42,6 +42,7 @@ export default ({ children, dark }) =>
         font-family: 'Roboto Slab';
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
           url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufD5qWr4xCCQ_k.woff2)
             format('woff2');
@@ -52,6 +53,7 @@ export default ({ children, dark }) =>
         font-family: 'Roboto Slab';
         font-style: normal;
         font-weight: 400;
+        font-display: swap;
         src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'),
           url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qWr4xCC.woff2)
             format('woff2');

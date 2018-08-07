@@ -116,8 +116,8 @@ export const Citation = ({ children, className }) => (
   </p>
 )
 
-export const Pretext = ({ children, color }) => (
-  <p>
+export const Pretext = ({ children, color, className }) => (
+  <p className={className}>
     {children}
     <style jsx>{`
       p {
