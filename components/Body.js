@@ -69,9 +69,11 @@ export default ({ children, dark }) =>
           url('komu_a.svg#komua') format('svg');
         font-weight: normal;
         font-style: normal;
+        font-display: swap;
       }
       @font-face {
         font-family: 'Bookmania-Regular';
+        font-display: swap;
         src: url('/static/fonts/mania.eot');
         src: url('/static/fonts/mania.eot?#iefix') format('embedded-opentype'),
           url('/static/fonts/mania.woff2') format('woff2'),
