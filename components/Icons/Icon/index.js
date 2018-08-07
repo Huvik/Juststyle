@@ -1,13 +1,31 @@
 import React from 'react'
+import pose from 'react-pose'
 import { percentage } from '../../../utils'
 
+const Item = pose.div(config)
+
+const config = {
+  visible: {
+    opacity: 1,
+    transition: { duration: 300 }
+  }
+}
+
 export default ({ width, height, onClick, children }) =>
-  <div
-    className="icon"
-    onClick={onClick}
-  >
+  <div className="icon" onClick={onClick}>
+    <Item style={{ width: '100px' }} />
     {children}
     <style jsx>{`
+      .icon :global(.item) {
+        background: red;
+        width: 100px;
+        height: 100px;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+      }
       .icon {
         position: relative;
         width: 100%;
@@ -96,29 +114,29 @@ export default ({ width, height, onClick, children }) =>
       }
     `}</style>
   </div>
-  // <TransitionGroup>
+// <TransitionGroup>
 
-  //     <Transition  timeout={duration}>
-  //   {(state) => (
-  //     <div style={{
-  //       ...defaultStyle,
-  //       ...transitionStyles[state]
-  //     }}>
-  //       I'm a fade Transition!
-  //     </div>
-  //   )}
-  // </Transition>
-  //   {/* {children.map((kid, i) => (
-  //     <Transition timeout={{ enter: 0, exit: i * time }}>
-  //       {(state) => <div className={`animation-item ${state}`}>{kid}</div>}
-  //     </Transition>
-  //   ))}
-  //   <style jsx>{`
-  //     .animation-item {
-  //       opacity: 0;
-  //     }
-  //   `}</style> */}
-  // </TransitionGroup>
+//     <Transition  timeout={duration}>
+//   {(state) => (
+//     <div style={{
+//       ...defaultStyle,
+//       ...transitionStyles[state]
+//     }}>
+//       I'm a fade Transition!
+//     </div>
+//   )}
+// </Transition>
+//   {/* {children.map((kid, i) => (
+//     <Transition timeout={{ enter: 0, exit: i * time }}>
+//       {(state) => <div className={`animation-item ${state}`}>{kid}</div>}
+//     </Transition>
+//   ))}
+//   <style jsx>{`
+//     .animation-item {
+//       opacity: 0;
+//     }
+//   `}</style> */}
+// </TransitionGroup>
 
 // style={{
 //   width: '100%',

@@ -43,8 +43,7 @@ class DropDown extends React.Component {
 
   render() {
     const { options, open, selectedOption, width } = this.state
-    const { onChange, big } = this.props
-    // return <div>{options.map(option => <div>a</div>)}</div>
+    const { onChange, size, placeholder } = this.props
 
     return (
       <ClickOutside onClickOutside={this.close}>
@@ -58,7 +57,7 @@ class DropDown extends React.Component {
           >
             <div className="selectedOption">
               <span>
-                {selectedOption}
+                {!selectedOption ? placeholder : selectedOption}
               </span>
               {!open ? '▾ ' : '▾'}
             </div>
@@ -89,15 +88,17 @@ class DropDown extends React.Component {
               text-transform: uppercase;
               position: relative;
               white-space: nowrap;
-              font-size: ${big ? '5.6' : '2.1'}rem;
-              line-height: ${big ? '5.6' : '2.1'}rem;
-              height: ${big ? '5.6' : '2.1'}rem;
+              font-size: ${size ? size : '5.6'}rem;
+              line-height: ${size ? size : '5.6'}rem;
+              height: ${size ? size : '5.6'}rem;
+              cursor: pointer;
             }
             .dropdown-window {
               padding: 0.7rem 0.7rem 0 0.7rem;
               margin-top: -0.7rem;
               background-color: ${colors.white};
               position: absolute;
+              z-index: 999;
             }
             .dropdown-window.active {
               box-shadow: 0 0 15px 0 rgba(187, 189, 193, 0.5);
