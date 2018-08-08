@@ -37,7 +37,6 @@ class Icon extends React.Component {
             {child}
           </svg>
         )}
-        {console.log(children)}
         <style jsx>{`
           .icon {
             position: relative;
