@@ -71,7 +71,7 @@ class DropDown extends React.Component {
                             onClick={() => this.changeOption(option)}
                             key={option}
                           >
-                            <span>
+                            <span className="dropdown-item__option">
                               {option}
                             </span>
                           </div>
@@ -130,6 +130,9 @@ class DropDown extends React.Component {
             .dropdown-item span:hover {
               color: ${colors.pink};
               border-bottom: 3px solid ${colors.pink};
+            }
+            .dropdown-item__option {
+              font-size: ${size ? size : '5.6'}rem;
             }
           `}</style>
         </div>

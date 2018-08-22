@@ -17,7 +17,7 @@ export default ({ children, onClick, small, className }) => (
         text-transform: uppercase;
         font-family: ${fonts.komu};
         padding: 0 2.5rem;
-
+        transition: all 150ms ease-in;
       }
       button:hover {
         background-color: ${colors.greenDark};

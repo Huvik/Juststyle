@@ -2,39 +2,41 @@ import React from 'react'
 import pose from 'react-pose'
 import { percentage } from '../../../utils'
 import posed, { PoseGroup } from 'react-pose'
+// import Corner from '../Corner'
 
 // const Box = posed.svg({});
-// const PosedComponent = posed(Icon);
-const config = {
-  visible: {
-    display: 'block',
-    delayChildren: 0,
-    staggerChildren: 150
-  },
-  hidden: {
-    display: 'none'
-  }
-}
-const Corner = posed.div(config)
+const PosedComponent = posed(Icon);
+// const config = {
+//   visible: {
+//     display: 'block',
+//     delayChildren: 0,
+//     staggerChildren: 150
+//   },
+//   hidden: {
+//     display: 'none'
+//   }
+// }
+// const Corner = posed.div(config)
+// const Item = posed.svg(config)
 
 class Icon extends React.Component {
-  state = { isVisible: false }
-  componentDidMount() {
-    setTimeout(this.toggle, 3000)
-  }
+  // state = { isVisible: true }
+  // componentDidMount() {
+  //   setTimeout(this.toggle, 3000)
+  // }
 
   render() {
     const { width, height, onClick, children } = this.props
-    const { isVisible } = this.state
+    // const { isVisible } = this.state
     return (
-      <Corner
+      <div
         className="icon"
-        pose={this.state.isVisible ? 'visible' : 'hidden'}
-        // onClick={onClick}
+        // pose={this.state.isVisible ? 'visible' : 'hidden'}
+        onClick={onClick}
       >
-        {children.map(child =>
-          <svg>
-            {child}
+        {children.map((_, i) =>
+          <svg key={i}>
+            {children}
           </svg>
         )}
         <style jsx>{`
@@ -51,7 +53,7 @@ class Icon extends React.Component {
             left: 50%;
             transform: translate(-50%, -50%);
           }
-          /* @keyframes p1 {
+          @keyframes p1 {
             0% {
               opacity: 1;
             }
@@ -126,9 +128,9 @@ class Icon extends React.Component {
             animation-delay: -1ms;
             animation: p3 500ms infinite;
             animation-timing-function: linear;
-          } */
+          }
         `}</style>
-      </Corner>
+      </div>
     )
   }
 }
