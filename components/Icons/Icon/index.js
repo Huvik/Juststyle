@@ -5,41 +5,117 @@ import posed, { PoseGroup } from 'react-pose'
 // import Corner from '../Corner'
 
 // const Box = posed.svg({});
-const PosedComponent = posed(Icon);
-// const config = {
+// const PosedComponent = posed(Icon)
+
+// const groupConfig = {
 //   visible: {
-//     display: 'block',
-//     delayChildren: 0,
-//     staggerChildren: 150
+//     delayChildren: 150,
+//     staggerChildren: 50
 //   },
 //   hidden: {
-//     display: 'none'
+//     delayChildren: 150,
+//     staggerChildren: 50
 //   }
 // }
-// const Corner = posed.div(config)
+
+// const config = {
+//   visible: {
+//     opacity: 1
+//   },
+//   hidden: {
+//     opcaity: 0
+//   }
+// }
+// const Group = posed.div(groupConfig)
 // const Item = posed.svg(config)
 
+const sidebarProps = {
+  open: {
+    staggerChildren: 500
+  },
+  closed: {
+    staggerChildren: 0
+  }
+}
+
+const itemProps = {
+  open: { opacity: 1 },
+  closed: { opacity: 0 }
+}
+
+const SidePanel = posed.ul(sidebarProps)
+const Item = posed.svg(itemProps)
+
+class Example extends React.PureComponent {
+  state = { isOpen: false }
+
+  componentDidMount() {
+    setInterval(this.toggle, 1500)
+  }
+
+  toggle = () => this.setState({ isOpen: !this.state.isOpen })
+
+  render() {
+    const { isOpen } = this.state
+    const { children, height, width } = this.props
+
+    return (
+      <SidePanel
+        onClick={this.toggle}
+        className="icon"
+        pose={isOpen ? 'open' : 'closed'}
+      >
+        {children.map((_, i) =>
+          <Item key={i}>
+            {children}
+          </Item>
+        )}
+        <style jsx global>{`
+          .icon {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-top: ${percentage(height, width)};
+          }
+          .icon :global(svg) {
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        `}</style>
+      </SidePanel>
+    )
+  }
+}
+
 class Icon extends React.Component {
-  // state = { isVisible: true }
-  // componentDidMount() {
-  //   setTimeout(this.toggle, 3000)
-  // }
+  constructor(props) {
+    super(props)
+    this.state = { isVisible: true }
+  }
+  componentDidMount() {
+    setInterval(this.setState({ isVisible: !this.state.isVisible }), 500)
+  }
 
   render() {
     const { width, height, onClick, children } = this.props
-    // const { isVisible } = this.state
+    const { isVisible } = this.state
+    console.log(this.state)
+
     return (
-      <div
+      <Group
         className="icon"
-        // pose={this.state.isVisible ? 'visible' : 'hidden'}
+        pose={isVisible ? 'visible' : 'hidden'}
         onClick={onClick}
       >
         {children.map((_, i) =>
-          <svg key={i}>
+          <Item key={i}>
             {children}
-          </svg>
+          </Item>
         )}
-        <style jsx>{`
+        {/* <style jsx>{`
           .icon {
             position: relative;
             width: 100%;
@@ -129,12 +205,12 @@ class Icon extends React.Component {
             animation: p3 500ms infinite;
             animation-timing-function: linear;
           }
-        `}</style>
-      </div>
+        `}</style> */}
+      </Group>
     )
   }
 }
-export default Icon
+export default Example
 // export default ({ width, height, onClick, children }) =>
 // <div
 //   className="icon"
