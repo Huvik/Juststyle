@@ -649,9 +649,14 @@ export default () =>
       cursor: pointer;
     }
 
-    a:visited,
-    a:link {
-      color: inherit;
+    a {
+      color: ${colors.green};
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: ${colors.green};
     }
 
     .w {
