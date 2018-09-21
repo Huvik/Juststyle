@@ -16,13 +16,13 @@ class DropDown extends React.Component {
     }
   }
 
-  // componentWillReceiveProps({ options, selected }) {
-  //   this.setState({ options, selectedOption: selected }, this.readSize)
-  // }
+  componentWillReceiveProps({ options, selected }) {
+    this.setState({ options, selectedOption: selected }, this.readSize)
+  }
 
-  // componentDidMount() {
-  //   this.setState({ width: this.win.offsetWidth }, this.readSize)
-  // }
+  componentDidMount() {
+    this.setState({ width: this.win.offsetWidth }, this.readSize)
+  }
 
   toggleOpen = () => {
     this.setState({ open: !this.state.open }, this.readSize)

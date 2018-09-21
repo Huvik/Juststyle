@@ -3,8 +3,8 @@ import React from 'react'
 import { fonts } from '../../constants/fonts'
 import { colors } from '../../constants/colors'
 
-export default ({ children, onClick, small, className }) => (
-  <button className={className} onClick={onClick}>
+export default ({ children, onClick, small, className, type }) =>
+  <button className={className} onClick={onClick} type={type}>
     {children}
     <style jsx>{`
       button {
@@ -25,11 +25,9 @@ export default ({ children, onClick, small, className }) => (
       }
       .pink {
         background-color: ${colors.pink};
-
       }
       .pink:hover {
         background-color: ${colors.pinkDark};
       }
     `}</style>
   </button>
-)

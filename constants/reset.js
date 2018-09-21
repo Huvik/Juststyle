@@ -649,9 +649,15 @@ export default () =>
       cursor: pointer;
     }
 
-    a:visited,
-    a:link {
-      color: inherit;
+    a {
+      color: ${colors.green};
+      transition: color 225ms ease-in;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    a:visited {
+      color: ${colors.green};
     }
 
     .w {
@@ -677,5 +683,40 @@ export default () =>
     }
     .loading {
       animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translate3d(0, 2rem, 0);
+      }
+      50% {
+        opacity: 1;
+      }
+      70% {
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .a {
+      opacity: 0;
+      animation-name: slideIn;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+      animation-duration: 1000ms;
+    }
+    .a1 {
+      animation-delay: 400ms;
+    }
+    .a2 {
+      animation-delay: 500ms;
+    }
+    .a3 {
+      animation-delay: 600ms;
+    }
+    .a4 {
+      animation-delay: 700ms;
     }
   `}</style>

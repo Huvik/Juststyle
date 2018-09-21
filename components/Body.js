@@ -35,7 +35,6 @@ export default ({ children, dark }) =>
         href="/static/fonts/mania.woff2"
       />
     </Head>
-    {children}
     <Reset />
     <style jsx>{`
       @font-face {
@@ -83,4 +82,5 @@ export default ({ children, dark }) =>
           url('/static/fonts/mania.ttf') format('truetype');
       }
     `}</style>
+    {children}
   </main>

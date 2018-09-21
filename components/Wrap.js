@@ -2,7 +2,7 @@ import React from 'react'
 import { sizes, rem } from '../constants/sizes'
 
 export default ({ flex, size, children, className, ...rest }) => (
-  <div className={`w-${size} ${flex ? 'f' : ''} ${className}`} {...rest}>
+  <div className={`w-${size} ${flex ? 'f' : ''} ${className ? className : ''}`} {...rest}>
     {children}
     <style jsx>{`
       div {
@@ -41,6 +41,11 @@ export default ({ flex, size, children, className, ...rest }) => (
       @media (max-width: 450px) {
         div {
           padding: 0 2rem;
+        }
+      }
+      @media (max-width: 1440px) {
+        .w-10 {
+          max-width: 111rem;
         }
       }
     `}</style>
