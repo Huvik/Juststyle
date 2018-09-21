@@ -25,6 +25,9 @@ export default ({ flex, size, children, className }) =>
       .w-12 {
         max-width: ${rem(sizes.w12)};
       }
+      .w-14 {
+        max-width: ${rem(sizes.w14)}
+      }
       .f {
         display: flex;
         flex-flow: row wrap;
