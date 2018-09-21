@@ -1,6 +1,6 @@
 {
   "name": "juststyle",
-  "version": "0.5.19",
+  "version": "0.5.25",
   "main": "dist/build.js",
   "license": "MIT",
   "scripts": {
@@ -10,21 +10,19 @@
     "prepublish": "webpack --config webpack.config.js"
   },
   "peerDependency": {
-    "react": "^15.5.4",
-    "styled-jsx": "^2.2.0"
+    "react": "^16.3.2",
+    "styled-jsx": "^3.6.0"
   },
   "dependencies": {
-    "next": "^6.0.2",
+    "next": "^7.0.0",
     "react": "^16.3.2",
     "react-click-outside": "github:tj/react-click-outside",
     "react-dom": "^16.3.2",
-    "react-modal": "^3.1.13",
-    "react-pose": "^2.1.2",
-    "react-transition-group": "^2.2.1"
+    "react-modal": "^3.1.13"
   },
   "devDependencies": {
-    "babel-loader": "^7.1.2",
-    "styled-jsx": "^2.2.0",
+    "babel-loader": "^8.0.2",
+    "styled-jsx": "^3.0.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.1"
   }

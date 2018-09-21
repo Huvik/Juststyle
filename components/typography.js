@@ -1,7 +1,7 @@
 import React from 'react'
 import { fonts } from '../constants/fonts'
 
-export const H1 = ({ children, className }) => (
+export const H1 = ({ children, className }) =>
   <h1 className={className}>
     {children}
     <style jsx>{`
@@ -12,11 +12,17 @@ export const H1 = ({ children, className }) => (
         letter-spacing: 0.064rem;
         font-weight: 400;
       }
+
+      @media (max-width: 1024px) {
+        h1 {
+          font-size: 5.6rem;
+          line-height: 5.6rem;
+        }
+      }
     `}</style>
   </h1>
-)
 
-export const H2 = ({ children, className }) => (
+export const H2 = ({ children, className }) =>
   <h2 className={className}>
     {children}
     <style jsx>{`
@@ -26,11 +32,16 @@ export const H2 = ({ children, className }) => (
         line-height: 5.6rem;
         font-weight: 400;
       }
+      @media (max-width: 1024px) {
+        h2 {
+          font-size: 3.5rem;
+          line-height: 4.2rem;
+        }
+      }
     `}</style>
   </h2>
-)
 
-export const H3 = ({ children, className }) => (
+export const H3 = ({ children, className }) =>
   <h3 className={className}>
     {children}
     <style jsx>{`
@@ -48,9 +59,8 @@ export const H3 = ({ children, className }) => (
       }
     `}</style>
   </h3>
-)
 
-export const H4 = ({ children, className }) => (
+export const H4 = ({ children, className }) =>
   <h4 className={className}>
     {children}
     <style jsx>{`
@@ -62,9 +72,8 @@ export const H4 = ({ children, className }) => (
       }
     `}</style>
   </h4>
-)
 
-export const H5 = ({ children, className }) => (
+export const H5 = ({ children, className }) =>
   <h5>
     {children}
     <style jsx>{`
@@ -76,9 +85,8 @@ export const H5 = ({ children, className }) => (
       }
     `}</style>
   </h5>
-)
 
-export const PeopleTitle = ({ children, className }) => (
+export const PeopleTitle = ({ children, className }) =>
   <h5>
     {children}
     <style jsx>{`
@@ -91,9 +99,8 @@ export const PeopleTitle = ({ children, className }) => (
       }
     `}</style>
   </h5>
-)
 
-export const Citation = ({ children, className }) => (
+export const Citation = ({ children, className }) =>
   <p className={className}>
     {children}
     <style jsx>{`
@@ -114,9 +121,8 @@ export const Citation = ({ children, className }) => (
       }
     `}</style>
   </p>
-)
 
-export const Pretext = ({ children, color, className }) => (
+export const Pretext = ({ children, color, className }) =>
   <p className={className}>
     {children}
     <style jsx>{`
@@ -126,11 +132,16 @@ export const Pretext = ({ children, color, className }) => (
         letter-spacing: 0.02rem;
         max-width: 73rem;
       }
+      @media (max-width: 1440px) {
+        p {
+          font-size: 2rem;
+          line-height: 3.5rem;
+        }
+      }
     `}</style>
   </p>
-)
 
-export const OverHeading = ({ children }) => (
+export const OverHeading = ({ children }) =>
   <p>
     {children}
     <style jsx>{`
@@ -141,4 +152,3 @@ export const OverHeading = ({ children }) => (
       }
     `}</style>
   </p>
-)
