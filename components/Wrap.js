@@ -1,8 +1,8 @@
 import React from 'react'
 import { sizes, rem } from '../constants/sizes'
 
-export default ({ flex, size, children, className }) => (
-  <div className={`w-${size} ${flex ? 'f' : ''} ${className}`}>
+export default ({ flex, size, children, className, ...rest }) => (
+  <div className={`w-${size} ${flex ? 'f' : ''} ${className}`} {...rest}>
     {children}
     <style jsx>{`
       div {
