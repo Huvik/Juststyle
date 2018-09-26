@@ -4,7 +4,7 @@ import Reset from '../constants/reset'
 import { colors } from '../constants/colors'
 
 export default ({ children, dark }) =>
-  <main style={{ backgroundColor: dark ? colors.greyLight : colors.white }}>
+  <div style={{ backgroundColor: dark ? colors.greyLight : colors.white }}>
     <Head>
       <link
         rel="preload"
@@ -37,6 +37,9 @@ export default ({ children, dark }) =>
     </Head>
     <Reset />
     <style jsx>{`
+      div {
+        overflow: hidden;
+      }
       @font-face {
         font-family: 'Roboto Slab';
         font-style: normal;
@@ -83,4 +86,4 @@ export default ({ children, dark }) =>
       }
     `}</style>
     {children}
-  </main>
+  </div>

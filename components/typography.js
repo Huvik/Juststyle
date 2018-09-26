@@ -1,7 +1,7 @@
 import React from 'react'
 import { fonts } from '../constants/fonts'
 
-export const H1 = ({ children, className, itemProp}) => (
+export const H1 = ({ children, className, itemProp }) =>
   <h1 itemProp={itemProp} className={className}>
     {children}
     <style jsx>{`
@@ -122,7 +122,7 @@ export const Citation = ({ children, className }) =>
     `}</style>
   </p>
 
-export const Pretext = ({ children, color, className, itemProp }) => (
+export const Pretext = ({ children, color, className, itemProp }) =>
   <p itemProp={itemProp} className={className}>
     {children}
     <style jsx>{`
