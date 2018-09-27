@@ -122,7 +122,7 @@ export const Citation = ({ children, className }) =>
     `}</style>
   </p>
 
-export const Pretext = ({ children, color, className, itemProp }) => 
+export const Pretext = ({ children, color, className, itemProp }) =>
   <p itemProp={itemProp} className={className}>
     {children}
     <style jsx>{`
@@ -136,6 +136,12 @@ export const Pretext = ({ children, color, className, itemProp }) =>
         p {
           font-size: 2rem;
           line-height: 3.5rem;
+        }
+      }
+      @media (max-width: 600px) {
+        p {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
         }
       }
     `}</style>
