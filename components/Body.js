@@ -37,9 +37,6 @@ export default ({ children, dark }) =>
     </Head>
     <Reset />
     <style jsx>{`
-      div {
-        overflow: hidden;
-      }
       @font-face {
         font-family: 'Roboto Slab';
         font-style: normal;

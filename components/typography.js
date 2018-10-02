@@ -19,6 +19,12 @@ export const H1 = ({ children, className, itemProp }) =>
           line-height: 5.6rem;
         }
       }
+      @media (max-width: 450px) {
+        h1 {
+          font-size: 4.2rem;
+          line-height: 4.2rem;
+        }
+      }
     `}</style>
   </h1>
 
