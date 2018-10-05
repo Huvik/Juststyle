@@ -38,10 +38,15 @@ export const H2 = ({ children, className }) =>
         line-height: 5.6rem;
         font-weight: 400;
       }
+      @media (max-width: 1300px) {
+        h2 {
+          font-size: 4.2rem;
+          line-height: 4.2rem;
+        }
+      }
       @media (max-width: 1024px) {
         h2 {
           font-size: 3.5rem;
-          line-height: 4.2rem;
         }
       }
     `}</style>
@@ -142,6 +147,12 @@ export const Pretext = ({ children, color, className, itemProp }) =>
         p {
           font-size: 2rem;
           line-height: 3.5rem;
+        }
+      }
+      @media (max-width: 600px) {
+        p {
+          font-size: 1.8rem;
+          line-height: 2.8rem;
         }
       }
     `}</style>
