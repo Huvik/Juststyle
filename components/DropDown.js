@@ -134,6 +134,16 @@ class DropDown extends React.Component {
             .dropdown-item__option {
               font-size: ${size ? size : '5.6'}rem;
             }
+            @media (max-width: 600px) {
+              .dropdown {
+                font-size: ${size ? size / 2 : '3.8'}rem;
+                line-height: ${size ? size / 2 : '3.8'}rem;
+                height: ${size ? size / 2 : '3.8'}rem;
+              }
+              .dropdown-item__option {
+                font-size: ${size ? size / 2 : '3.8'}rem;
+              }
+            }
           `}</style>
         </div>
       </ClickOutside>
