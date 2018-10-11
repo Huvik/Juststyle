@@ -36,6 +36,12 @@ class DropDown extends React.Component {
     this.setState({ width: this.win.offsetWidth })
   }
 
+  changeSelect = element => {
+    const value = element.target.value
+    this.props.onChange(value)
+    this.setState({ selectedOption: value })
+  }
+
   changeOption = option => {
     this.props.onChange(option)
     this.setState({ selectedOption: option })
@@ -43,11 +49,23 @@ class DropDown extends React.Component {
 
   render() {
     const { options, open, selectedOption, width } = this.state
-    const { onChange, size, placeholder } = this.props
+    const { onChange, size, placeholder, name, onBlur, error } = this.props
 
     return (
       <ClickOutside onClickOutside={this.close}>
         <div className="dropdown" style={{ width }}>
+          <select
+            name={name}
+            onBlur={onBlur(name)}
+            value={selectedOption}
+            onChange={this.changeSelect}
+          >
+            {options.map(option =>
+              <option value={option} key={option}>
+                {option}
+              </option>
+            )}
+          </select>
           <div
             ref={ref => {
               this.win = ref
@@ -81,6 +99,13 @@ class DropDown extends React.Component {
             </div>
           </div>
           <style jsx>{`
+            select {
+              position: absolute;
+              max-width: 100%;
+              width: 100%;
+              height: 100%;
+              font-size: 2.1rem;
+            }
             .dropdown {
               font-family: ${fonts.komu};
               color: ${colors.black};
@@ -88,15 +113,15 @@ class DropDown extends React.Component {
               text-transform: uppercase;
               position: relative;
               white-space: nowrap;
-              font-size: ${size ? size : '5.6'}rem;
-              line-height: ${size ? size : '5.6'}rem;
-              height: ${size ? size : '5.6'}rem;
+              font-size: ${size ? size : '2.8'}rem;
+              line-height: ${size ? size : '2.8'}rem;
+              height: ${size ? size : '2.8'}rem;
               cursor: pointer;
             }
             .dropdown-window {
               padding: 0.7rem 0.7rem 0 0.7rem;
               margin-top: -0.7rem;
-              background-color: ${colors.white};
+              background-color: ${error && !open ? colors.pink : colors.white};
               position: absolute;
               z-index: 999;
             }
@@ -108,7 +133,7 @@ class DropDown extends React.Component {
             }
             .selectedOption {
               display: inline-flex;
-              color: ${colors.pink};
+              color: ${error && !open ? colors.white : colors.pink};
               margin-bottom: 1rem;
             }
             .selectedOption span {
@@ -132,16 +157,19 @@ class DropDown extends React.Component {
               border-bottom: 3px solid ${colors.pink};
             }
             .dropdown-item__option {
-              font-size: ${size ? size : '5.6'}rem;
+              font-size: ${size ? size : '2.8'}rem;
             }
-            @media (max-width: 600px) {
+            @media (max-width: 768px) {
               .dropdown {
-                font-size: ${size ? size / 2 : '3.8'}rem;
-                line-height: ${size ? size / 2 : '3.8'}rem;
-                height: ${size ? size / 2 : '3.8'}rem;
+                font-size: ${size ? size / 2 : '2.8'}rem;
+                line-height: ${size ? size / 2 : '2.8'}rem;
+                height: ${size ? size / 2 : '2.8'}rem;
               }
               .dropdown-item__option {
-                font-size: ${size ? size / 2 : '3.8'}rem;
+                font-size: ${size ? size / 2 : '2.8'}rem;
+              }
+              .dropdown-window {
+                pointer-events: none;
               }
             }
           `}</style>
