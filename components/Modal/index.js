@@ -41,6 +41,7 @@ export default ({ isOpen, closeModal, children }) =>
         justify-content: center;
       }
       .modal {
+        display: flex;
         margin: 4rem;
         max-width: 123.4rem;
         background: ${colors.white};
