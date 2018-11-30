@@ -176,10 +176,14 @@ const Ico = ({ width, height, onClick, children }) =>
     {children}
     <style jsx>{`
       .icon {
-        position: relative;
-        width: 100%;
-        height: 0;
+        width: ${width}px;
+        height: ${height}px;
         padding-top: ${percentage(height, width)};
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        z-index: 10;
+        transform: translate(-50%, -50%);
       }
       .icon :global(svg) {
         position: absolute;
