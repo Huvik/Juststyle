@@ -171,19 +171,15 @@ import { percentage } from '../../../utils'
 //   }
 // }
 // export default Example
-const Ico = ({ width, height, onClick, children }) =>
+const Ico = ({ width, height, onClick, children }) => (
   <div className="icon" onClick={onClick}>
     {children}
     <style jsx>{`
       .icon {
-        width: ${width}px;
-        height: ${height}px;
+        position: relative;
+        width: 100%;
+        height: 0;
         padding-top: ${percentage(height, width)};
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 10;
-        transform: translate(-50%, -50%);
       }
       .icon :global(svg) {
         position: absolute;
@@ -270,5 +266,6 @@ const Ico = ({ width, height, onClick, children }) =>
       }
     `}</style>
   </div>
+)
 
 export default Ico
