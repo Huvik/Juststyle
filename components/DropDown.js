@@ -101,10 +101,12 @@ class DropDown extends React.Component {
           <style jsx>{`
             select {
               position: absolute;
-              max-width: 100%;
-              width: 100%;
-              height: 100%;
+              left: 0;
+              top: 0;
+              right: 0;
+              bottom: 0;
               font-size: 2.1rem;
+              max-width: 100%;
             }
             .dropdown {
               font-family: ${fonts.komu};

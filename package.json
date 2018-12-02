@@ -1,6 +1,6 @@
 {
   "name": "juststyle",
-  "version": "0.5.30",
+  "version": "0.6.0",
   "main": "dist/build.js",
   "license": "MIT",
   "scripts": {
