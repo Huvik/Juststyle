@@ -10,7 +10,7 @@ export default ({ width, height, color, ...rest }) => (
             <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"/>
         </filter>
     </defs>
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
         <g transform="translate(20 18)">
             <use fill="#000" filter="url(#a)" xlinkHref="#b"/>
             <use fill="#FFF" xlinkHref="#b"/>
