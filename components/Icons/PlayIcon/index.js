@@ -3,7 +3,7 @@ import Icon from '../Icon'
 
 
 export default ({ width, height, color, ...rest }) => (
-  <Icon width={width} height={height} {...rest}>
+//   <Icon width={width} height={height} {...rest}>
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="194" height="194" viewBox="0 0 194 194">
         <defs>
             <path id="b" d="M0 0h154v154H0z"/>
@@ -20,11 +20,14 @@ export default ({ width, height, color, ...rest }) => (
             </g>
             <path fill="#FF747D" d="M124 95l-44 28V67z"/>
         </g>
-    </svg>
     <style jsx>{`
         svg {
+            width: ${width}px;
+            height: ${height}px;
             box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
         }
     `}</style>
-</Icon>
+    </svg>
+
+// </Icon>
 )
