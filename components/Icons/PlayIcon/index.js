@@ -17,5 +17,10 @@ export default ({ width, height, color, ...rest }) => (
         </g>
         <path fill="#FF747D" d="M124 95l-44 28V67z"/>
     </g>
+    <style jsx>{`
+        svg {
+            box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.2);
+        }
+    `}</style>
 </svg>
 )
