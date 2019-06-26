@@ -2,9 +2,9 @@ import React from 'react'
 import Icon from '../Icon'
 
 
-export default ({ width, height, color, ...rest }) => (
+export default ({ width, height, onClick, ...rest }) => (
 //   <Icon width={width} height={height} {...rest}>
-    <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="194" height="194" viewBox="0 0 194 194">
+    <svg onClick={onClick} xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="194" height="194" viewBox="0 0 194 194">
         <defs>
             <path id="b" d="M0 0h154v154H0z"/>
             <filter id="a" width="140.3%" height="140.3%" x="-20.1%" y="-18.8%" filterUnits="objectBoundingBox">
