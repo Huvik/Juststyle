@@ -3,7 +3,7 @@ import React from 'react'
 import { fonts } from '../../constants/fonts'
 import { colors } from '../../constants/colors'
 
-export default ({ children, onClick, small, className, type }) =>
+export default ({ children, onClick, small, className, type, width }) =>
   <button className={className} onClick={onClick} type={type}>
     {children}
     <style jsx>{`
@@ -11,7 +11,7 @@ export default ({ children, onClick, small, className, type }) =>
         line-height: ${small ? '4.2rem' : '5.6rem'};
       }
       button {
-        min-width: 12.6rem;
+        min-width: ${width ? width : '12.6rem'};
         font-size: 2.1rem;
         background-color: ${colors.green};
         text-transform: uppercase;

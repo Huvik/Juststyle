@@ -1,9 +1,9 @@
 import React from 'react'
 import { colors } from '../constants/colors'
 
-export default ({ type, placeholder, onChange, value, className }) =>
+export default ({ type, placeholder, onChange, value, className, name }) =>
   <div>
-    <input type={type} placeholder={placeholder} onChange={onChange} className={className} value={value}/>
+    <input type={type} placeholder={placeholder} onChange={onChange} className={className} value={value} name={name} />
     <style jsx>{`
       div {
         display: inline-block;
