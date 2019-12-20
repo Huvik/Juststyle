@@ -1,8 +1,8 @@
-import React from 'react'
-import { colors } from './colors'
-import { fonts } from './fonts'
+import React from "react";
+import { colors } from "./colors";
+import { fonts } from "./fonts";
 
-export default () =>
+export default () => (
   <style jsx global>{`
     html,
     body,
@@ -121,7 +121,7 @@ export default () =>
     blockquote:after,
     q:before,
     q:after {
-      content: '';
+      content: "";
       content: none;
     }
 
@@ -398,9 +398,9 @@ export default () =>
    */
 
     button::-moz-focus-inner,
-    [type='button']::-moz-focus-inner,
-    [type='reset']::-moz-focus-inner,
-    [type='submit']::-moz-focus-inner {
+    [type="button"]::-moz-focus-inner,
+    [type="reset"]::-moz-focus-inner,
+    [type="submit"]::-moz-focus-inner {
       border-style: none;
       padding: 0;
     }
@@ -410,9 +410,9 @@ export default () =>
    */
 
     button:-moz-focusring,
-    [type='button']:-moz-focusring,
-    [type='reset']:-moz-focusring,
-    [type='submit']:-moz-focusring {
+    [type="button"]:-moz-focusring,
+    [type="reset"]:-moz-focusring,
+    [type="submit"]:-moz-focusring {
       outline: 1px dotted ButtonText;
     }
 
@@ -456,8 +456,8 @@ export default () =>
    * 2. Remove the padding in IE 10-.
    */
 
-    [type='checkbox'],
-    [type='radio'] {
+    [type="checkbox"],
+    [type="radio"] {
       box-sizing: border-box; /* 1 */
       padding: 0; /* 2 */
     }
@@ -466,8 +466,8 @@ export default () =>
    * Correct the cursor style of increment and decrement buttons in Chrome.
    */
 
-    [type='number']::-webkit-inner-spin-button,
-    [type='number']::-webkit-outer-spin-button {
+    [type="number"]::-webkit-inner-spin-button,
+    [type="number"]::-webkit-outer-spin-button {
       height: auto;
     }
 
@@ -476,7 +476,7 @@ export default () =>
    * 2. Correct the outline style in Safari.
    */
 
-    [type='search'] {
+    [type="search"] {
       -webkit-appearance: textfield; /* 1 */
       outline-offset: -2px; /* 2 */
     }
@@ -485,8 +485,8 @@ export default () =>
    * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
    */
 
-    [type='search']::-webkit-search-cancel-button,
-    [type='search']::-webkit-search-decoration {
+    [type="search"]::-webkit-search-cancel-button,
+    [type="search"]::-webkit-search-decoration {
       -webkit-appearance: none;
     }
 
@@ -720,3 +720,4 @@ export default () =>
       animation-delay: 700ms;
     }
   `}</style>
+);

@@ -37,6 +37,7 @@ export const H2 = ({ children, className }) =>
         font-size: 5.6rem;
         line-height: 5.6rem;
         font-weight: 400;
+        letter-spacing: 0.047rem;
       }
       @media (max-width: 1300px) {
         h2 {
