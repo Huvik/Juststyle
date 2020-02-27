@@ -122,7 +122,7 @@ export const Citation = ({ children, className }) =>
         line-height: 4.2rem;
         font-weight: 400;
         letter-spacing: 0.03rem;
-        margin-bottom: 2.8rem;
+        margin-bottom: 1.4rem;
       }
       @media (max-width: 425px) {
         p {
