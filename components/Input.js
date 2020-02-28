@@ -3,7 +3,11 @@ import { colors } from '../constants/colors'
 
 export default ({ type, placeholder, onChange, value, className, name }) =>
   <div>
-    <input type={type} placeholder={placeholder} onChange={onChange} className={className} value={value} name={name} />
+    {type == 'textarea' ?
+      <textarea placeholder={placeholder} onChange={onChange} className={className} value={value} name={name} rows="6" />
+      :
+      <input type={type} placeholder={placeholder} onChange={onChange} className={className} value={value} name={name} />
+    }
     <style jsx>{`
       div {
         display: inline-block;
