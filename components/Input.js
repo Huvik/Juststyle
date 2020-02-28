@@ -13,7 +13,7 @@ export default ({ type, placeholder, onChange, value, className, name }) =>
         display: inline-block;
         width: 100%;
       }
-      input {
+      input, textarea {
         width: 100%;
         background-color: ${colors.greyLight};
         padding: 1.4rem 2.6rem;
